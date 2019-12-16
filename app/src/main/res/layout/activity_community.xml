@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jaewon.musiccursorex.Community"
+    android:background="@drawable/backgroundimage4"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:gravity="right">
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_below="@id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"/>
+
+                <EditText
+                    android:id="@+id/editTextFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:layout_weight="10"
+                android:choiceMode="multipleChoice"
+                android:textFilterEnabled = "true"
+                android:id="@+id/communitylistview"
+                android:layout_width="match_parent"
+                android:layout_height="410dp">
+            </com.baoyz.swipemenulistview.SwipeMenuListView>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/gonelayout"
+                android:gravity="center"
+                android:background="#aa454545"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <Button
+                    android:background="#aab1b0b0"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:textColor="#ffffff"
+                    android:id="@+id/delete"
+                    android:layout_marginRight="25dp"
+                    android:text="삭제"/>
+                <Button
+                    android:background="#aab1b0b0"
+                    android:text="모두선택"
+                    android:textColor="#ffffff"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/allselect"/>
+                <Button
+                    android:layout_marginLeft="25dp"
+                    android:textColor="#ffffff"
+                    android:background="#aab1b0b0"
+                    android:text="선택해제"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/allselectfalse"/>
+            </LinearLayout>
+        </LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/communitylistbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/friendaddbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fab_size="mini"
+            app:fab_label="친구 추가"
+            app:fab_colorNormal="@color/colorPrimary"
+            android:src="@drawable/people" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sendfloatingbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fab_size="mini"
+            app:fab_label="보낸 쪽지함"
+            app:fab_colorNormal="@color/colorPrimary"
+            android:src="@drawable/send" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/getfloatingbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fab_size="mini"
+            app:fab_label="받은 쪽지함"
+
+            app:fab_colorNormal="@color/colorPrimary"
+            android:src="@drawable/mail" />
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

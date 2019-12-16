@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.jaewon.musiccursorex.LogIn"
+    android:background="@drawable/backgroundimage2">
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/userid"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:background="@drawable/text1"
+            android:gravity="fill"
+            android:hint="  아이디를 입력하세요"
+            android:textColor="#8e8b8b"
+            android:textSize="12dp" />
+
+        <EditText
+            android:password="true"
+            android:id="@+id/userpassword"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text1"
+            android:gravity="fill"
+            android:hint="  비밀번호를 입력하세요"
+            android:textColor="#8e8b8b"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="#efbff4"
+            android:text="로그인" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아직 회원이 아니신가요?"
+            />
+
+        <Button
+            android:id="@+id/membershipbutton"
+            android:layout_width="132dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="회원가입" />
+    </LinearLayout>
+</LinearLayout>

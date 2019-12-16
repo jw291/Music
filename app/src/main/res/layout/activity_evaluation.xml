@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jaewon.musiccursorex.EvaluationActivity"
+    android:background="@drawable/backgroundimage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/evaluationimage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/empty_albumart" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="17dp"
+                    android:textSize="23dp"
+                    android:id="@+id/evaluationname"
+                    android:layout_toRightOf="@id/evaluationimage"
+                    android:text="노래 제목"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="9dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/evaluationsinger"
+                    android:textSize="23dp"
+                    android:layout_toRightOf="@id/evaluationimage"
+                    android:layout_below="@id/evaluationname"
+                    android:text="가수명"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:layout_marginTop="20dp"
+            android:layout_above="@id/relative"
+            android:id="@+id/commentlistview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></ListView>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/chatText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_toRightOf="@id/chatText"
+            android:background="#fcacac"/>
+    </RelativeLayout>
+</RelativeLayout>

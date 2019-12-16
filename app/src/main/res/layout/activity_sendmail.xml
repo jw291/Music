@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jaewon.musiccursorex.SendmailActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/text1"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="430dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    보내는 사람 : "/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:id="@+id/mailsendname"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/text1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        받는 사람 : "/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:id="@+id/mailgetname"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        제목 : "/>
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mailtitle"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+               <ImageButton
+                   android:id="@+id/mailsongplay"
+                   android:layout_gravity="center"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:background="@null"
+                   android:src="@drawable/ic_play"/>
+                <ImageView
+                    android:id="@+id/mailsongalbum"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/empty_albumart"/>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/mailsongtitle"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="노래 제목"/>
+                    <TextView
+                        android:id="@+id/mailsongsinger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="가수명"/>
+                    <SeekBar
+                        android:id="@+id/mailsongseekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용 작성"/>
+            <EditText
+                android:background="#ffffff"
+                android:layout_width="240dp"
+                android:layout_height="259dp"
+                android:id="@+id/mailcontent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:background="#ffbfbf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/songsend"
+            android:text="노래 보내기"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:background="#ffbfbf"
+            android:text="쪽지 보내기" />
+    </LinearLayout>
+</LinearLayout>

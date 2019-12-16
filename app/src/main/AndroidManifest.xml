@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jaewon.musiccursorex">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AudioApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.jaewon.musiccursorex.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".AudioService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="REWIND" />
+                <action android:name="TOGGLE_PLAY" />
+                <action android:name="FORWARD" />
+                <action android:name="CLOSE" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".LogIn" />
+        <activity android:name=".Membership" />
+        <activity android:name=".ExplainActivity" />
+        <activity android:name=".PlayListActivity" />
+        <activity android:name=".Community" />
+        <activity android:name=".Chattingroom" />
+        <activity android:name=".EvaluationActivity" />
+        <activity android:name=".Setting" />
+        <activity android:name=".SendmailActivity" />
+        <activity android:name=".GetmailBox" />
+        <activity android:name=".SendmailBox" />
+        <activity android:name=".SetMailDetail" />
+        <activity android:name=".GetMailDetail"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jaewon.musiccursorex.Membership"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/signupimage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/profileimage"/>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/text1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    아이디    :"
+            android:textSize="13dp"/>
+        <EditText
+            android:id="@+id/newuserid"
+            android:layout_marginLeft="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="아이디 입력"
+            android:textSize="13dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/text1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 비밀번호   :"
+            android:textSize="13dp"/>
+        <EditText
+            android:id="@+id/newuserpassword"
+            android:password="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 입력"
+            android:textSize="13dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/text1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  PW 확인   :"
+            android:textSize="13dp"/>
+        <EditText
+            android:password="true"
+            android:id="@+id/newuserpassword2"
+            android:layout_marginLeft="7dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 재입력"
+            android:textSize="13dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/text1">
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="갤러리"/>
+        <Button
+            android:id="@+id/camerabutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카메라"/>
+        <Button
+            android:id="@+id/savecamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 저장"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/signupcompletebutton"
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="#efbff4"
+        android:text="완료"/>
+</LinearLayout>
